@@ -1,13 +1,10 @@
 {
-  "minimum_chrome_version": "23",
-
-  "manifest_version": 2,
-
   "name": "Pinboard Bookmarklet",
-
+  "description": "Google Chrome Extension for Pinboard Bookmarklet with shortcut support",
   "version" : "0.1.0",
-
-  "description": "Google Chrome Extention for Pinboard Bookmarklet with shortcut support",
+  "manifest_version": 2,
+  "minimum_chrome_version": "23",
+  "homepage_url": "https://github.com/sparanoid/pinboard-bookmarklet",
 
   "permissions": [
     "storage",
