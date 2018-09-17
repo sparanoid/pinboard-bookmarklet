@@ -1,0 +1,15 @@
+{
+  "name": "pinboard-bookmarklet",
+  "version": "0.1.0",
+  "author": "Tunghsiao Liu",
+  "homepage": "http://sparanoid.com/work/pinboard-bookmarklet/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sparanoid/pinboard-bookmarklet.git"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-zip": "^4.2.0"
+  }
+}
