@@ -1,8 +1,9 @@
 {
-  "name": "Pinboard Bookmarklet",
-  "description": "Google Chrome Extension for Pinboard Bookmarklet with shortcut support",
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDescription__",
   "version" : "0.1.0",
   "manifest_version": 2,
+  "default_locale": "en",
   "minimum_chrome_version": "23",
   "homepage_url": "https://github.com/sparanoid/pinboard-bookmarklet",
 
