@@ -9,7 +9,6 @@ describe('chrome/event_listener', function() {
     spyOn(pinboard, 'readLater');
     spyOn(pinboard, 'unreadBookmarks');
     spyOn(pinboard, 'allBookmarks');
-    spyOn(pinboard.contextMenus, 'setup');
   });
 
   it('should add listeners when loaded.', function() {
@@ -35,8 +34,6 @@ describe('chrome/event_listener', function() {
       expect(pinboard.unreadBookmarks).toHaveBeenCalled();
       listener('all_bookmarks');
       expect(pinboard.readLater).toHaveBeenCalled();
-
-      expect(pinboard.contextMenus.setup).toHaveBeenCalled();
     });
   });
 });
