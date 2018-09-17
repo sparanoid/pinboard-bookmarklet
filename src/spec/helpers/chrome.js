@@ -4,12 +4,6 @@ var chrome = {
       addListener: function() {}
     }
   },
-  contextMenus: {
-    create: function() {},
-    onClicked: {
-      addListener: function() {}
-    }
-  },
   extension: {
     onMessage: {
       addListener: function() {}

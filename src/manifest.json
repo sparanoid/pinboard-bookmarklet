@@ -3,16 +3,15 @@
 
   "manifest_version": 2,
 
-  "name": "Pinboard",
+  "name": "Pinboard Bookmarklet",
 
-  "version" : "0.0.12",
+  "version" : "0.1.0",
 
-  "description": "Google Chrome Extention for Pinboard (http://pinboard.in).",
+  "description": "Google Chrome Extention for Pinboard Bookmarklet with shortcut support",
 
   "permissions": [
     "storage",
     "tabs",
-    "contextMenus",
     "http://*/*",
     "https://*/*"
   ],
@@ -35,7 +34,6 @@
 
   "background": {
     "scripts": ["javascripts/pinboard.js",
-                "javascripts/context_menus.js",
                 "javascripts/chrome/event_listener.js"],
     "persistent": false
   },
