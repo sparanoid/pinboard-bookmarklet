@@ -2,7 +2,7 @@
 
 ## Description
 
-Google Chrome Extention for Pinboard (http://pinboard.in).
+Google Chrome Extension for Pinboard (http://pinboard.in).
 
 ### Shortcut menu for 'Save to Pinboard', 'Read Later', 'Unread bookmarks', 'All bookmarks'.
 ![](https://github.com/yasuyk/Pinboard-Chrome-Extension/raw/master/sample/png/screen_capture_01.png)
