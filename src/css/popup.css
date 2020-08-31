@@ -1,8 +1,22 @@
 body {
+  --bg: #fff;
+  --text: #000;
+  --border: hsla(0, 0%, 0%, .1);
+
   padding: 3px 0;
   margin: 0;
   font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: .8rem;
+  color: var(--text);
+  background: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg: #292a2d;
+    --text: rgb(232, 234, 237);
+    --border: hsla(0, 0%, 100%, .1);
+  }
 }
 
 .item {
@@ -14,11 +28,11 @@ body {
 }
 
 .item:hover {
-  background-color: #e5e7ea;
+  background-color: var(--border);
 }
 
 .border {
   height: 1px;
   margin: 3px 0;
-  background: #eee;
+  background: var(--border);
 }
