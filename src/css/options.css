@@ -1,8 +1,22 @@
 body {
+  --bg: #fff;
+  --text: #000;
+  --border: hsla(0, 0%, 0%, .1);
+
   font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 10px;
   font-size: 14px;
   min-width: 600px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg: #292a2d;
+    --text: rgb(232, 234, 237);
+    --border: hsla(0, 0%, 100%, .1);
+  }
 }
 
 h1 {
@@ -20,8 +34,7 @@ h1 {
 h2 {
   margin: 12px 0 6px 0;
   padding: 3px;
-  border-top: 1px solid #9cc2ef;
-  background-color: #ebeff9;
+  background-color: var(--border);
   font-size: 18px;
   font-weight: bold;
 }
@@ -32,5 +45,5 @@ h3 {
 }
 
 .notes {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid var(--border);
 }
