@@ -10,6 +10,6 @@
   },
   "devDependencies": {
     "gulp": "^4.0.0",
-    "gulp-zip": "^4.2.0"
+    "gulp-zip": "^6.0.0"
   }
 }
