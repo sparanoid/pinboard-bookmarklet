@@ -20,8 +20,12 @@ var pinboard = (function() {
       '&description=' + encodeURIComponent(description) +
       '&title=' + encodeURIComponent(title);
 
-    window.open(fullUrl, 'Pinboard',
-                'toolbar=no,scrollbars=yes,width=750,height=700');
+    chrome.windows.create({
+      url: fullUrl,
+      type: 'popup',
+      width: 750,
+      height: 700
+    });
   };
 
   var saveToPinboard = function() {
@@ -47,23 +51,23 @@ var pinboard = (function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       var tab = tabs[0];
 
-      var readlater = window.open(
-        BASE_URL + '/add?later=yes&noui=yes&jump=close&url=' +
+      chrome.windows.create({
+        url: BASE_URL + '/add?later=yes&noui=yes&jump=close&url=' +
           encodeURIComponent(tab.url) + '&title=' +
-          encodeURIComponent(tab.title), 'Pinboard',
-        'toolbar=no');
-
-      readlater.resizeTo(0, 0);
-      readlater.blur();
+          encodeURIComponent(tab.title),
+        type: 'popup',
+        width: 0,
+        height: 0
+      });
     });
   };
 
   var unreadBookmarks = function() {
-    window.open(BASE_URL + '/toread/');
+    chrome.tabs.create({url: BASE_URL + '/toread/'});
   };
 
   var allBookmarks = function() {
-    window.open(BASE_URL);
+    chrome.tabs.create({url: BASE_URL});
   };
 
   var addclickEventListeners = function(doc) {
@@ -86,3 +90,6 @@ var pinboard = (function() {
     addclickEventListeners: addclickEventListeners
   };
 })();
+
+// Make pinboard available globally
+globalThis.pinboard = pinboard;
