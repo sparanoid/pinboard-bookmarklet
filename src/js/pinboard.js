@@ -2,19 +2,19 @@
 // suppress "Redefinition of pinboard'. (W079)
 // suppress "'pinboard' is defined but never used. (W098)"
 
-var pinboard = (function() {
+var pinboard = (function () {
   'use strict';
 
   var REGEX_SAVE_URL = /^http[s]?\:\/\/pinboard\.in\/add/;
   var BASE_URL = 'https://pinboard.in';
 
-  var saveToPinboardPopup = function(config) {
+  var saveToPinboardPopup = function (config) {
     var c = config || {},
-        url = c.url,
-        title = c.title,
-        description = c.description || '',
-        pinboardUrl = BASE_URL + '/add?',
-        fullUrl;
+      url = c.url,
+      title = c.title,
+      description = c.description || '',
+      pinboardUrl = BASE_URL + '/add?',
+      fullUrl;
 
     fullUrl = pinboardUrl + 'showtags=yes' + '&url=' + encodeURIComponent(url) +
       '&description=' + encodeURIComponent(description) +
@@ -28,15 +28,15 @@ var pinboard = (function() {
     });
   };
 
-  var saveToPinboard = function() {
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  var saveToPinboard = function () {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       var tab = tabs[0];
 
       if (!tab.url.match(REGEX_SAVE_URL)) {
         chrome.tabs.sendMessage(
           tab.id,
-          {action: 'getSelection'},
-          function(selection) {
+          { action: 'getSelection' },
+          function (selection) {
             saveToPinboardPopup({
               url: tab.url,
               title: tab.title,
@@ -47,8 +47,8 @@ var pinboard = (function() {
     });
   };
 
-  var readLater = function() {
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  var readLater = function () {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       var tab = tabs[0];
 
       chrome.windows.create({
@@ -62,15 +62,15 @@ var pinboard = (function() {
     });
   };
 
-  var unreadBookmarks = function() {
-    chrome.tabs.create({url: BASE_URL + '/toread/'});
+  var unreadBookmarks = function () {
+    chrome.tabs.create({ url: BASE_URL + '/toread/' });
   };
 
-  var allBookmarks = function() {
-    chrome.tabs.create({url: BASE_URL});
+  var allBookmarks = function () {
+    chrome.tabs.create({ url: BASE_URL });
   };
 
-  var addclickEventListeners = function(doc) {
+  var addclickEventListeners = function (doc) {
     doc.querySelector('#saveToPinboard').addEventListener(
       'click', this.saveToPinboard);
     doc.querySelector('#readLater').addEventListener(

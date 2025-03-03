@@ -7,7 +7,7 @@ gulp.task('default', defaultTask);
 
 function defaultTask(done) {
   gulp.src('./src/**/*')
-  .pipe(zip('chrome-extension-' + chrome.version + '.zip'))
-  .pipe(gulp.dest('./dist/'));
+    .pipe(zip('chrome-extension-' + chrome.version + '.zip'))
+    .pipe(gulp.dest('./dist/'));
   done();
 }
