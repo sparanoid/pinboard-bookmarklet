@@ -1,13 +1,10 @@
-const gulp = require('gulp');
-const zip = require('gulp-zip');
+import gulp from 'gulp';
+import zip from 'gulp-zip';
 
-const chrome = require('./src/manifest');
+import chrome from './src/manifest.json' with { type: 'json' }
 
-gulp.task('default', defaultTask);
-
-function defaultTask(done) {
+export default () => (
   gulp.src('./src/**/*')
     .pipe(zip('chrome-extension-' + chrome.version + '.zip'))
-    .pipe(gulp.dest('./dist/'));
-  done();
-}
+    .pipe(gulp.dest('./dist/'))
+);
