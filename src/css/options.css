@@ -1,9 +1,10 @@
 body {
   --bg: #fff;
   --text: #000;
-  --border: hsla(0, 0%, 0%, .1);
+  --border: hsla(0, 0%, 0%, 0.1);
 
-  font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
   margin: 10px;
   font-size: 14px;
   min-width: 600px;
@@ -15,7 +16,7 @@ body {
   body {
     --bg: #292a2d;
     --text: rgb(232, 234, 237);
-    --border: hsla(0, 0%, 100%, .1);
+    --border: hsla(0, 0%, 100%, 0.1);
   }
 }
 
@@ -25,7 +26,7 @@ h1 {
   padding: 0;
   height: 67px;
   line-height: 67px;
-  background-image: url('../img/pinboard_icon_64.png');
+  background-image: url("../img/pinboard_icon_64.png");
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 76px;

@@ -33,7 +33,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
 // Listen for messages from popup
 chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
+  function (request, sender, sendResponse) {
     if (request.action === "saveToPinboard") {
       pinboard.saveToPinboard();
     } else if (request.action === "readLater") {

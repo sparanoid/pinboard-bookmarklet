@@ -1,12 +1,13 @@
 body {
   --bg: #fff;
   --text: #000;
-  --border: hsla(0, 0%, 0%, .1);
+  --border: hsla(0, 0%, 0%, 0.1);
 
   padding: 3px 0;
   margin: 0;
-  font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: .8rem;
+  font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 0.8rem;
   color: var(--text);
   background: var(--bg);
 }
@@ -15,7 +16,7 @@ body {
   body {
     --bg: #292a2d;
     --text: rgb(232, 234, 237);
-    --border: hsla(0, 0%, 100%, .1);
+    --border: hsla(0, 0%, 100%, 0.1);
   }
 }
 
